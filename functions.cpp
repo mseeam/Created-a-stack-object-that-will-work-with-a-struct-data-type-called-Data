@@ -1,13 +1,17 @@
-/*
- * Your comment header here
- * modify this file as needed to complete the assignment
- */
+/********************************************************************************
+ * File  :   functions.cpp                                                      *
+ * Author: Mohammad Seeam                                                       *
+ * Assignment 5: Stacks                                                         *
+ * This is a simple application to demonstrate struct and stack in C++.         *
+ * This header structure for all cpp and h files.                               *
+ * This file, functions.cpp, includes only functions.h                          *
+ ********************************************************************************/
 
 #include "functions.h"
 
 void rand_string(std::string *str){
     // create size 0 to MAXSTRSIZE-1
-    int rnum = rand() % MAXSTRSIZE;
+    int rnum = (rand() % MAXSTRSIZE) +1;
     
     // make buffer to hold rand string
     char *buffer = new char[rnum+1];
@@ -23,7 +27,18 @@ void rand_string(std::string *str){
     *str = buffer;
 
     // clean up
-    delete buffer;
+    delete[] buffer;
     return;
 }
+
+bool isInteger(const std::string& s)
+{
+   if(s.empty() || ((!isdigit(s[0])) && (s[0] != '-') && (s[0] != '+'))) return false;
+
+   char * p;
+   strtol(s.c_str(), &p, 10);
+
+   return (*p == 0);
+}
+
 
