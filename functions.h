@@ -1,7 +1,10 @@
-/*
- * Your comment header here
- * modify this file as needed to complete the assignment
- */
+/********************************************************************************
+ * File  :   functions.h                                                        *
+ * Author: Mohammad Seeam                                                       *
+ * Assignment 5: Stacks                                                         *
+ * This is a simple application to demonstrate struct and stack in C++.         *
+ * This header structure for all cpp and h files.                               *              *
+ ********************************************************************************/
 
 #ifndef STACKS_FUNCTIONS_H
 #define STACKS_FUNCTIONS_H
@@ -14,5 +17,7 @@
 #include <string>     /* string */
 
 void rand_string(std::string*);
+bool isInteger(const std::string&);
+
 
 #endif /* STACKS_FUNCTIONS_H */
