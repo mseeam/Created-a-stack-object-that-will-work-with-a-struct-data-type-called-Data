@@ -10,6 +10,9 @@
 #ifndef STACK_H
 #define STACK_H
 
+#define CHECK_CONSTRUCTOR_PARAMETER 2
+#define DEFAULT_CONSTRUCTOR_PARAMETER 10
+
 #include "data.h"
 
 class Stack {
