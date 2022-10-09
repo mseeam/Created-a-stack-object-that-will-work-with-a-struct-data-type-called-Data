@@ -14,8 +14,8 @@
 
 Stack::Stack(int size) {
 
-    if(size<2){
-        size=10;
+    if(size<CHECK_CONSTRUCTOR_PARAMETER){
+        size=DEFAULT_CONSTRUCTOR_PARAMETER;
     }
 
     this->top = -1;
